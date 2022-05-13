@@ -1,0 +1,20 @@
+footer {
+    background-color: #EDF0F5;
+}
+
+footer .container {
+    text-align: center;
+}
+
+footer p {
+    font-size: 16px;
+    line-height: 22px;
+    margin: 20px;
+}
+
+/* - - - - - Screen Query - - - - - */
+@media screen and (max-width: 800px) {
+    footer {
+        margin-top: 5rem;
+    }
+}

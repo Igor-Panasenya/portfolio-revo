@@ -1,0 +1,148 @@
+li {
+    list-style: none;
+}
+
+a {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    color: #EDF0F5;
+    text-decoration: none;
+}
+
+.navbar {
+    /* width: 100%; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 0 24px;
+    margin-left: 0;
+    margin-right: 0;
+    background-color: #415167;
+    overflow: hidden;
+}
+
+.navbar img {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    width: 18px;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 753px;
+    margin: 0;
+}
+
+.nav-item-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 150px;
+    max-width: 250px;
+}
+
+.nav-item {
+    margin-top: 30px;
+    width: 150px;
+}
+
+.nav-link {
+    transition: 0.3s ease;
+}
+
+.nav-link:hover {
+    color: black;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    width: 30%;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+/* - - - - - Screen Query - - - - - */
+@media screen and (max-width: 1300px) {
+    .hamburger {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 30px;
+        display: block;
+        z-index: 101;
+        overflow: hidden;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(225deg);
+        background-color: #fff;
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-225deg);
+        background-color: #fff;
+    }
+
+    .hamburger.active:hover .bar {
+        background-color: black;
+    }
+
+    .nav-menu {
+        position: absolute;
+        right: -120%;
+        gap: 0;
+        flex-direction: column;
+        background-color: #415167;
+        width: 100%;
+        text-align: start;
+        transition: 0.5s;
+        padding-bottom: 20px;
+        margin: 0;
+
+        z-index: 100;
+    }
+
+    .nav-item {
+        margin: 16px 0;
+    }
+
+    .nav-menu.active {
+        right: -70%;
+    }
+
+    .nav-branding {
+        margin-left: 24px;
+    }
+
+    .navbar {
+        padding: 0;
+        background-color: none;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .bar {
+        background-color: black;
+    }
+    .nav-menu.active {
+        right: -5%;
+    }
+}

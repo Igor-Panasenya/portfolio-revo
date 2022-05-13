@@ -1,0 +1,76 @@
+.swiper-button-next::after, .swiper-button-prev::after {
+    color: #daa36c;
+}
+
+.swiper {
+    width: 98%;
+}
+
+.hero-favorite {
+    background: linear-gradient(to left, #F2F2F2 71%, #415167 71%);
+}
+
+.favorite-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 125px;
+}
+
+.slider-wrapper {
+    width: 560px;
+    display: flex;
+    transition: all 0.8s ease;
+
+    position: relative;
+    left: 0;
+}
+
+.slide {
+    opacity: 0.1;
+}
+
+.slide.active {
+    display: block;
+    opacity: 1;
+    transition: all 0.8s ease;
+    position: relative;
+    left: 0;
+}
+
+.slide.active .favorite-card {
+    box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.2);
+}
+
+.slide.active {
+    display: block;
+    opacity: 1;
+    transition: all 0.8s ease;
+}
+
+#btn-prev>img, #btn-next>img {
+    width: 100px;
+}
+
+#btn-prev, #btn-next {
+    width: 100px;
+
+    filter:opacity(0.5);
+    transition: all 0.3s ease;
+    margin-left: 280px;
+    margin-right: 20px;
+
+    z-index: 100;
+}
+
+#btn-prev:hover, #btn-next:hover {
+    cursor: pointer;
+    filter:opacity(1);
+}
+
+/* - - - - - Screen Query - - - - - */
+@media screen and (max-width: 800px) {
+    .hero-favorite {
+        background: none;
+    }
+}

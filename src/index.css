@@ -1,0 +1,23 @@
+html, body { box-sizing: border-box; margin: 0; padding: 0; width: 100%; max-width: 100%; overflow-x: hidden; }
+html {scroll-behavior: smooth;}
+
+body {
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F2F2F2;
+    color: #415167;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    box-sizing: border-box;
+    max-width: 1400px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
