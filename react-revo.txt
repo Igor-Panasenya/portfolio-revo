@@ -1,0 +1,517 @@
+﻿- - - - - Build.jsx - - - - - 
+
+import './build.css';
+import BuildItem from './components/BuildItem';
+import { useState } from 'react';
+
+
+const [buildItems, setBuildItems] = useState([
+{
+id: '1',
+title: 'Nguồn gốc',
+body: 'Những hạt cà phê Arabica, Robusta đạt chất lượng theo tiêu chuẩn quốc tế.',
+img: 'public/img/icon-base-1.png',
+},
+{
+id: '2',
+title: 'Chất lượng',
+body: 'Từng một hạt cà phê là cả một quá trình tập trung cao độ của nghệ nhân cà phê.',
+img: 'public/img/icon-base-2.png',
+},
+{
+id: '3',
+title: 'Các loại hạt',
+body: '70% chất lượng tách cà phê đến từ nguồn gốc và chất lượng green bean.',
+img: 'public/img/icon-base-3.png',
+},
+{
+id: '4',
+title: 'Pha chế',
+body: 'Những hạt cà phê được lột xác qua quá trình rang xay kỹ lưỡng và nghiêm ngặt.',
+img: 'public/img/icon-base-4.png',
+},
+])
+
+
+<section class="hero-build">
+        <div class="container">
+            <h3>Your Personalized Coffee</h3>
+            <h2>COFFEE BUILD YOUR BASE</h2>
+            <div class="build-content">
+
+	{builtItems.map((builtItem) =>
+	    <BuildItem builtItem={builtItem} key={builtItem.id} />
+	)}
+
+            </div>
+        </div>
+</section>
+
+- - - - - build.css - - - - - 
+
+h2 {
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 34px;
+    margin-top: 0;
+    margin-bottom: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    margin-top: 85px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.build-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+}
+
+@media screen and (max-width: 575px) {
+    h2 {
+        margin-bottom: 50px;
+    }
+}
+
+- - - - - BuildItem.jsx - - - - - 
+
+import './buildItem.css';
+
+({buildItem})
+
+<div class="build-item">
+                    <img src={buildItem.img}>
+                    <h5>{buildItem.title}</h5>
+                    <p>{buildItem.body}</p>
+</div>
+
+- - - - - buildItem.css - - - - - 
+
+.build-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 230px;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+.build-item img {
+    width: 114px;
+}
+
+h5 {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    margin: 0;
+    margin-top: 30px;
+}
+
+.build-item p {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+}
+
+
+- - - - - Favorite.jsx - - - - - 
+
+import './favorite.css';
+import FavoriteItem from './components/FavoriteItem';
+
+const [favoriteItems, setFavoriteItems] = useState([
+{
+id: '1',
+title: 'REVO Morning',
+body: 'đắng, hậu ngọt, hương hoa',
+img: 'public/img/coffe-1.jpg',
+price: '99.000',
+},
+{
+id: '2',
+title: 'REVO Origin',
+body: 'hậu ngọt, ít đắng, vị chua dâu',
+img: 'public/img/coffe-2.jpg',
+price: '139.000',
+},
+{
+id: '3',
+title: 'REVO Everyday',
+body: 'đắng, hậu ngọt, hương hoa',
+img: 'public/img/coffe-3.jpg',
+price: '85.000',
+},
+{
+id: '4',
+title: 'REVO Đậm Đà',
+body: 'đậm đà, đắng, truyền thống',
+img: 'public/img/coffe-4.jpg',
+price: '75.000',
+},
+{
+id: '5',
+title: 'REVO Morning',
+body: 'đắng, hậu ngọt, hương hoa',
+img: 'public/img/coffe-1.jpg',
+price: '99.000',
+},
+{
+id: '6',
+title: 'REVO Origin',
+body: 'hậu ngọt, ít đắng, vị chua dâu',
+img: 'public/img/coffe-2.jpg',
+price: '139.000',
+},
+{
+id: '7',
+title: 'REVO Everyday',
+body: 'đắng, hậu ngọt, hương hoa',
+img: 'public/img/coffe-3.jpg',
+price: '85.000',
+},
+{
+id: '8',
+title: 'REVO Đậm Đà',
+body: 'đậm đà, đắng, truyền thống',
+img: 'public/img/coffe-4.jpg',
+price: '75.000',
+},
+])
+
+
+<section class="hero-favorite">
+        <div class="container">
+            <h3>Choose Your Favorite</h3>
+            <h2>CHUẨN GU ĐÚNG VỊ</h2>
+
+            <div class="favorite-content">
+
+	{favoriteItems.map((favoriteItem) =>
+	    <FavoriteItem favoriteItem={favoriteItem} key={favoriteItem.id} />
+	)}
+
+        </div>
+
+        </div>
+</section>
+
+
+- - - - - favorite.css - - - - - 
+
+.hero-favorite {
+    background: linear-gradient(to left, #F2F2F2 71%, #415167 71%);
+}
+
+.favorite-content {
+    display: flex;
+    margin-bottom: 125px;
+}
+
+/* - - - - - Screen Query - - - - - */
+@media screen and (max-width: 768px) {
+    .hero-favorite {
+        background: none;
+    }
+}
+
+- - - - - FavoriteItem.jsx - - - - - 
+
+import './favoriteItem.css';
+
+({favoriteItem})
+
+<div class="favorite-card">
+                                        <img src={favoriteItem.img} alt="coffe">
+                                        <div class="favorit-card-content">
+                                            <p class="favorit-card-price">{favoriteItem.price}</p>
+                                            <h6>{favoriteItem.title}</h6>
+                                            <p class="favorit-card-info">{favoriteItem.body}</p>
+                                            <div class="favorit-card-buttons">
+                                                <div class="btn-mua">MUA NGAY</div>
+                                                <div class="btn-chi">CHI TIẾT</div>
+                                            </div>
+                                        </div>
+</div>
+
+- - - - - favoriteItem.css - - - - - 
+
+.favorite-card {
+    box-sizing: border-box;
+    display: flex;
+    background-color: rgb(223, 220, 228);
+    width: 560px;
+    margin-bottom: 35px;
+}
+
+.favorit-card-content {
+    display: flex;
+    flex-direction: column;
+    margin: 42px;
+}
+
+.favorit-card-content * {
+    margin: 0;
+    padding: 0;
+}
+
+.favorit-card-price {
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #C7A17A;
+}
+
+h6 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    color: #232C38;
+}
+
+.favorit-card-info {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 22px;
+    color: #151D28;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.favorit-card-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.btn-mua {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    padding: 8px 20px;
+    color: #F9FBFF;
+    background: #C7A17A;
+    border-radius: 19px;
+
+    margin-right: 30px;
+    transition: 0.3s ease;
+}
+
+.btn-chi {
+    box-sizing: border-box;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    background: transparent;
+    transition: 0.3s ease;
+}
+
+.btn-mua:hover, .btn-chi:hover {
+    cursor: pointer;
+    color: #F9FBFF;
+    background: #daa36c;
+}
+
+/* - - - - - Screen Query - - - - - */
+@media screen and (max-width: 1000px) {
+    .favorite-card {
+        width: 460px;
+        height: 210px;
+    }
+    
+    .favorit-card-content {
+        margin: 25px;
+    }
+    
+    .favorit-card-cost {
+        margin-bottom: 4px;
+        font-size: 16px;
+        line-height: 18px;
+    }
+    
+    h6 {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    
+    .favorit-card-info {
+        font-size: 14px;
+        line-height: 18px;
+        margin-top: 20px;
+    }
+    
+    .btn-mua {
+        font-size: 10px;
+        line-height: 14px;
+        padding: 8px 15px;
+    }
+    
+    .btn-chi {
+        font-size: 10px;
+        line-height: 14px;
+    }
+}
+
+/* - - - - - Screen Query - - - - - */
+@media screen and (max-width: 600px) {
+    .favorite-card img {
+        height: 60%;
+    }
+
+    .favorite-card {
+        flex-direction: column;
+        width: 250px;
+        height: 400px;
+    }
+
+    .favorite-card-cost {
+        margin-bottom: 4px;
+        font-size: 12px;
+        line-height: 14px;
+    }
+    
+    h6 {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    
+    .favorite-card-info {
+        font-size: 12px;
+        line-height: 14px;
+        margin-top: 10px;
+    }
+}
+
+
+- - - - - Gift.jsx - - - - - 
+
+import './gift.css';
+import GiftItem from './components/GiftItem';
+
+
+<section class="hero-giftset">
+        <div class="container">
+            <h3>Best Gift For Best Friend</h3>
+            <h2>GIFTSET</h2>
+
+            <div class="flex-wrapper-gift">
+
+                <div class="slider-wrapper-gift">
+                        <div class="slide-gift slider-wrapper-gift active">
+                            <div class="content-giftset">
+                                <img src="img/big-coffe-1.png" alt="photo">
+                                <div class="hero-gifset-info">
+                                    <div class="giftset-info">
+                                        <p class="cost">285.000</p>
+                                        <h6>Giftset "Cà phê phin Việt Nam"</h6>
+                                        <p class="info">Món quà tuyệt vời dành cho người sành cà phê. Hạt cà phê được Revo cẩn trọng chọn lựa,
+                                            rang xay theo công nghệ và bí quyết học hỏi từ những nghệ nhân nổi tiếng, cùng với tình yêu,
+                                            sự đam mê của người làm cà phê… tạo ra những tách cà phê tinh khiết chỉ dành riêng cho bạn.</p>
+                                        <div class="giftset-info-char">
+                                            <div class="char-item">
+                                                <img src="img/icon-coffe.png" alt="coffe">
+                                                <div class="char-item-info">Loại hạt<br><span>Fine Robusta Blend</span></div>
+                                            </div>
+                                            <div class="char-item">
+                                                <img src="img/icon-mountains.png" alt="coffe">
+                                                <div class="char-item-info">Độ cao<br><span>700 - 800m</span></div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="buttons">
+                                            <div class="btn-mua">MUA NGAY</div>
+                                            <div class="btn-chi">CHI TIẾT</div>
+                                        </div>
+                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="slide-gift animate__animated animate__fadeInDown">
+                            <div class="content-giftset">
+                                <img src="img/big-coffe-2.png" alt="photo">
+                                <div class="hero-gifset-info">
+                                    <div class="giftset-info">
+                                        <p class="cost">365.000</p>
+                                        <h6>Giftset "Cà phê phin Việt Nam"</h6>
+                                        <p class="info">Món sự đam mê của người làm cà phê… tạo ra những tách cà phê tinh khiết chỉ dành riêng cho bạn quà tuyệt vời dành cho người sành cà phê. Hạt cà phê được Revo cẩn trọng chọn lựa,
+                                            rang xay theo, cùng với tình yêu,
+                                            sự đam mê của người làm cà phê… tạo ra những tách cà phê tinh khiết chỉ dành riêng cho bạn.</p>
+                                        <div class="giftset-info-char">
+                                            <div class="char-item">
+                                                <img src="img/icon-coffe.png" alt="coffe">
+                                                <div class="char-item-info">Loại hạt<br><span>Fine Robusta Blend</span></div>
+                                            </div>
+                                            <div class="char-item">
+                                                <img src="img/icon-mountains.png" alt="coffe">
+                                                <div class="char-item-info">Độ cao<br><span>750 - 850m</span></div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="buttons">
+                                            <div class="btn-mua">MUA NGAY</div>
+                                            <div class="btn-chi">CHI TIẾT</div>
+                                        </div>
+                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="slide-gift animate__animated animate__fadeInDown">
+                            <div class="content-giftset">
+                                <img src="img/big-coffe-3.png" alt="photo">
+                                <div class="hero-gifset-info">
+                                    <div class="giftset-info">
+                                        <p class="cost">279.000</p>
+                                        <h6>Giftset "Cà phê phin Việt Nam"</h6>
+                                        <p class="info">Món quà tuyệt vsự đam mê của người làm cà ời dành cho người sành cà phê. Hạt cà phê được Revo cẩn trọng chọn lựa,
+                                            rang xay theo công nghệ và bí quyết học hỏi từ những nghệ nhân nổi tiếng, cùng với tình yêu,
+                                            sự đam mê của người làm cà phê… tạo ra những o công nghệ và bí quyết học htách cà phê tinh khiết chỉ dành riêng cho bạn.</p>
+                                        <div class="giftset-info-char">
+                                            <div class="char-item">
+                                                <img src="img/icon-coffe.png" alt="coffe">
+                                                <div class="char-item-info">Loại hạt<br><span>Fine Robusta Blend</span></div>
+                                            </div>
+                                            <div class="char-item">
+                                                <img src="img/icon-mountains.png" alt="coffe">
+                                                <div class="char-item-info">Độ cao<br><span>800 - 900m</span></div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="buttons">
+                                            <div class="btn-mua">MUA NGAY</div>
+                                            <div class="btn-chi">CHI TIẾT</div>
+                                        </div>
+                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div class="dots-wrapper-gift animate__animated animate__fadeInUp wow">
+                    <span class="dot-gift active">1</span>
+                    <span class="dot-gift">2</span>
+                    <span class="dot-gift">3</span>
+                </div>
+                
+            </div>
+        </div>
+</section>
+
+- - - - - giftItem.css - - - - - 
+
